@@ -1,7 +1,3 @@
-| Image     | Build Status  |
-| :---      | :---:         |
-| ![Stability](https://img.shields.io/badge/openjdk:8-stable-green.svg) | ![Build Status](http://storage.googleapis.com/java-runtimes-kokoro-build-badges/openjdk8-master.png) |
-| ![Stability](https://img.shields.io/badge/openjdk:11-unstable-orange.svg) | ![Build Status](http://storage.googleapis.com/java-runtimes-kokoro-build-badges/openjdk11-master.png) |
 
 # Google Cloud Platform OpenJDK Docker Image
 
@@ -100,7 +96,6 @@ If the default command (java) is used, then the entry point sources the [setup-e
 
 |Env Var                             | Description         | Type     | Default                                     |
 |------------------------------------|---------------------|----------|---------------------------------------------|
-|`DBG_ENABLE`                        | Stackdriver Debugger| boolean  | `true`                                      |
 |`PROFILER_ENABLE`                   | Stackdriver Profiler| boolean  | `false`                                     |
 |`TMPDIR`                            | Temporary Directory | dirname  |                                             |
 |`JAVA_TMP_OPTS`                     | JVM tmpdir args     | JVM args | `-Djava.io.tmpdir=${TMPDIR}`                |
@@ -119,7 +114,6 @@ If not explicitly set, `JAVA_OPTS` is defaulted to
 ```
 JAVA_OPTS:=-showversion \
            ${JAVA_TMP_OPTS} \
-           ${DBG_AGENT} \
            ${PROFILER_AGENT} \
            ${JAVA_HEAP_OPTS} \
            ${JAVA_GC_OPTS} \
